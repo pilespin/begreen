@@ -1,0 +1,105 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th>Q4</th>
+      <th>Q5</th>
+      <th>Q6</th>
+      <th>Q7</th>
+      <th>Q8</th>
+      <th>Q9</th>
+      <th>Q10</th>
+      <th>Q11</th>
+      <th>Q12</th>
+      <th>Q13</th>
+      <th>Q14</th>
+      <th>Q15</th>
+      <th>Q16</th>
+      <th>Q17</th>
+      <th>Q18</th>
+      <th>Q19</th>
+      <th>Q20</th>
+      <th>Q21</th>
+      <th>Q22</th>
+      <th>Q23</th>
+      <th>Q24</th>
+      <th>Q25</th>
+      <th>Q26</th>
+      <th>Q27</th>
+      <th>Q28</th>
+      <th>Q29</th>
+      <th>Q30</th>
+      <th>Q31</th>
+      <th>Q32</th>
+      <th>Q33</th>
+      <th>Q34</th>
+      <th>Q35</th>
+      <th>Q36</th>
+      <th>Q37</th>
+      <th>Q38</th>
+      <th>Q39</th>
+      <th>Q40</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= restaurant.q1.to_i+restaurant.q2.to_i %></td>
+        <td><%= restaurant.q2 %></td>
+        <td><%= restaurant.q3 %></td>
+        <td><%= restaurant.q4 %></td>
+        <td><%= restaurant.q5 %></td>
+        <td><%= restaurant.q6 %></td>
+        <td><%= restaurant.q7 %></td>
+        <td><%= restaurant.q8 %></td>
+        <td><%= restaurant.q9 %></td>
+        <td><%= restaurant.q10 %></td>
+        <td><%= restaurant.q11 %></td>
+        <td><%= restaurant.q12 %></td>
+        <td><%= restaurant.q13 %></td>
+        <td><%= restaurant.q14 %></td>
+        <td><%= restaurant.q15 %></td>
+        <td><%= restaurant.q16 %></td>
+        <td><%= restaurant.q17 %></td>
+        <td><%= restaurant.q18 %></td>
+        <td><%= restaurant.q19 %></td>
+        <td><%= restaurant.q20 %></td>
+        <td><%= restaurant.q21 %></td>
+        <td><%= restaurant.q22 %></td>
+        <td><%= restaurant.q23 %></td>
+        <td><%= restaurant.q24 %></td>
+        <td><%= restaurant.q25 %></td>
+        <td><%= restaurant.q26 %></td>
+        <td><%= restaurant.q27 %></td>
+        <td><%= restaurant.q28 %></td>
+        <td><%= restaurant.q29 %></td>
+        <td><%= restaurant.q30 %></td>
+        <td><%= restaurant.q31 %></td>
+        <td><%= restaurant.q32 %></td>
+        <td><%= restaurant.q33 %></td>
+        <td><%= restaurant.q34 %></td>
+        <td><%= restaurant.q35 %></td>
+        <td><%= restaurant.q36 %></td>
+        <td><%= restaurant.q37 %></td>
+        <td><%= restaurant.q38 %></td>
+        <td><%= restaurant.q39 %></td>
+        <td><%= restaurant.q40 %></td>
+        <td><%= link_to 'Show', restaurant %></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>

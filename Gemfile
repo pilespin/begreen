@@ -10,6 +10,7 @@ gem 'rails', '~> 5.2.2'
 # gem 'sqlite3'
 group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :production do

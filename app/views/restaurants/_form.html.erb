@@ -1,0 +1,85 @@
+<%= form_with(model: restaurant, local: true) do |form| %>
+  <% if restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+      <% restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<h2>Evaluation de l'empreinte écologique</h2>
+
+
+<h4>Proposez-vous a vos clients de venir avec leurs propre boite alimentaire pour emporter leurs plats?</h4>
+<div><%= form.radio_button :q1, '10' %>Oui, c'est même affiché dans le magasin</input></div>
+<div><%= form.radio_button :q1, '5' %>Oui, sur demande du client"</input></div>
+<div><%= form.radio_button :q1, '0' %>Non</input></div>
+
+<h4>Fournissez vous proposez des pailles a vos clients ?</h4>
+<div><%= form.radio_button :q2, '0' %>Oui, des pailles en plastique</input></div>
+<div><%= form.radio_button :q2, '5' %>Oui, des pailles en amidon / carton</input></div>
+<div><%= form.radio_button :q2, '5' %>Non</input></div>
+
+<h4>Est-ce que vous proposez des emballages alimentaires recyclables a vos clients ?</h4>
+<div><%= form.radio_button :q3, '10' %>Oui</input></div>
+<div><%= form.radio_button :q3, '0' %>Non</input></div>
+
+<h4>Est-ce que vous proposez a vos clients de ramener chez eux le reste de la nourriture (Doggybag) ?</h4>
+<div><%= form.radio_button :q4, '5' %>Oui</input></div>
+<div><%= form.radio_button :q4, '0' %>Non</input></div>
+
+<h4>Est-ce que vous proposez plusieurs plats vegan et/ou végétarien sur votre carte ?</h4>
+<div><%= form.radio_button :q5, '15' %>Oui</input></div>
+<div><%= form.radio_button :q5, '0' %>Non</input></div>
+
+<h4>Proposez-vous des services de livraison a domicile ?</h4>
+<div><%= form.radio_button :q6, '10' %>Oui, par vélo ou scooter électrique</input></div>
+<div><%= form.radio_button :q6, '0' %>Oui, par scooter thermique</input></div>
+<div><%= form.radio_button :q6, '5' %>Non</input></div>
+
+<h4>Est-ce que vous avez des moyens pour valoriser vos biodechets?</h4>
+<div><%= form.radio_button :q7, '10' %>Oui</input></div>
+<div><%= form.radio_button :q7, '0' %>Non</input></div>
+
+<h4>Est-ce que vous recycler vos huiles usager?</h4>
+<div><%= form.radio_button :q8, '5' %>Oui</input></div>
+<div><%= form.radio_button :q8, '0' %>Non</input></div>
+
+<h4>Votre fournisseur d'énergie est-il vert ?</h4>
+<div><%= form.radio_button :q9, '10' %>Oui, je dispose d'un fournisseur d'électricité verte</input></div>
+<div><%= form.radio_button :q9, '0' %>Non</input></div>
+
+<h4>Est-ce que vous utilisez des bocaux en verre ou des boites consignés pour vos plats à emporter?</h4>
+<div><%= form.radio_button :q10, '10' %>Oui</input></div>
+<div><%= form.radio_button :q10, '0' %>Non</input></div>
+
+<h4>En moyenne, à quel distance se situent vos producteurs de fruits légumes?</h4>
+<div><%= form.radio_button :q11, '15' %>0-250 km</input></div>
+<div><%= form.radio_button :q11, '10' %>250-500 km</input></div>
+<div><%= form.radio_button :q11, '5' %>500-1000 km</input></div>
+<div><%= form.radio_button :q11, '3' %>1000-2000 km</input></div>
+<div><%= form.radio_button :q11, '0' %>2000+ km</input></div>
+
+<h4>Quel pourcentage de vos fruits légumes sont des produits de saison?</h4>
+<div><%= form.radio_button :q12, '0' %>0-30%</input></div>
+<div><%= form.radio_button :q12, '5' %>30-50%</input></div>
+<div><%= form.radio_button :q12, '10' %>50-70%</input></div>
+<div><%= form.radio_button :q12, '15' %>70-100%</input></div>
+
+<h4>e-Mail :</h4>
+<div><%= form.text_field :q13 %></input></div>
+
+<h4>Téléphone :</h4>
+<div><%= form.text_field :q14 %></input></div>
+
+<br><br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
