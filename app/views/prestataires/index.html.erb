@@ -7,25 +7,32 @@
   </thead>
 
   <tbody>
-    <% @prestataires.each do |prestataire| %>
-      
-      <div class="w3-card-4" style="width:92%;max-width:300px;">
-        <img src=<%= prestataire.imageurl %> alt="begreen remise" style="width:100%;opacity:0.85">
-        <div class="w3-container">
-        <h4><b><%= prestataire.prestation %></b></h4>    
-        <p><%= prestataire.description %></p>    
-        <p><%= prestataire.nom %></p>    
-        <!-- <p><%= prestataire.categorie %></p>     -->
-        <!-- <p><%= prestataire.ville %></p>     -->
-        <h4><b><%= prestataire.remise %></b></h4>    
-        <span><%= link_to 'Show', prestataire %></span>
-        <span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
-        <span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        
-        </div>
-      </div>
 
-      <tr>
-      </tr>
-    <% end %>
+    <div class="w3-display-topmiddle">
+      <div class="w3-padding">
+      <% @prestataires.each do |prestataire| %>
+        
+        <div class="w3-card-4" style="width:92%;max-width:300px;">
+          <img src=<%= prestataire.imageurl %> alt="begreen remise" style="width:100%;opacity:0.85">
+          <div class="w3-container">
+          <h4><b><%= prestataire.prestation %></b></h4>    
+          <p><%= prestataire.description %></p>    
+          <p><%= prestataire.nom %></p>    
+          <!-- <p><%= prestataire.categorie %></p>     -->
+          <!-- <p><%= prestataire.ville %></p>     -->
+          <h4><b><%= prestataire.remise %></b></h4>    
+          <span><%= link_to 'Show', prestataire %></span>
+          <span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
+          <span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <br>
+          <br>
+          
+          </div>
+        </div>
+
+        <tr>
+        </tr>
+      <% end %>
+      </div>
+    </div>
   </tbody>
