@@ -25,10 +25,10 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
-
+    # @prestataire = Prestataire.new(restaurant_params)
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+        format.html { redirect_to prestataires_path, notice: 'Voici les prestataires qui correspondent à votre besoin' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
