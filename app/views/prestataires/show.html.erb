@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @prestataire.categorie %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @prestataire.nom %>
+</p>
+
+<p>
+  <strong>Remise:</strong>
+  <%= @prestataire.remise %>
+</p>
+
+<p>
+  <strong>Prestation:</strong>
+  <%= @prestataire.prestation %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @prestataire.description %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @prestataire.ville %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @prestataire.imageurl %>
+</p>
+
+<%= link_to 'Edit', edit_prestataire_path(@prestataire) %> |
+<%= link_to 'Back', prestataires_path %>

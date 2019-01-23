@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  categorie: MyString
+  nom: MyString
+  remise: MyString
+  prestation: MyString
+  description: MyText
+  ville: MyString
+  imageurl: MyString
+
+two:
+  categorie: MyString
+  nom: MyString
+  remise: MyString
+  prestation: MyString
+  description: MyText
+  ville: MyString
+  imageurl: MyString

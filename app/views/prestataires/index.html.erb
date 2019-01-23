@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prestataires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Categorie</th>
+      <th>Nom</th>
+      <th>Remise</th>
+      <th>Prestation</th>
+      <th>Description</th>
+      <th>Ville</th>
+      <th>Imageurl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prestataires.each do |prestataire| %>
+      <tr>
+        <td><%= prestataire.categorie %></td>
+        <td><%= prestataire.nom %></td>
+        <td><%= prestataire.remise %></td>
+        <td><%= prestataire.prestation %></td>
+        <td><%= prestataire.description %></td>
+        <td><%= prestataire.ville %></td>
+        <td><%= prestataire.imageurl %></td>
+        <td><%= link_to 'Show', prestataire %></td>
+        <td><%= link_to 'Edit', edit_prestataire_path(prestataire) %></td>
+        <td><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prestataire', new_prestataire_path %>
