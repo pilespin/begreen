@@ -17,6 +17,12 @@
         <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
+    <!-- <img src="kiwi.svg" alt="Kiwi standing on oval"> -->
+
+    <%= image_tag "ecotrefle.svg", size: "260", alt: "Ecotrefle your restaurant eco friendly"%>
+
+    <%= yield %>
+
     <p class="navbar-text pull-right">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -28,6 +34,5 @@
     <% end %>
     </p> 
 
-    <%= yield %>
   </body>
 </html>
