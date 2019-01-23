@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="text-center">
 <p>
   <%= image_tag @prestataire.imageurl, size: "150", alt: @prestataire.nom %>
 </p>
@@ -30,3 +30,4 @@
 
 <%= link_to 'Edit', edit_prestataire_path(@prestataire) %> |
 <%= link_to 'Back', prestataires_path %>
+</div>

@@ -7,6 +7,9 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
 
+
+gem 'bootstrap'
+gem 'jquery-rails'
 # gem 'sqlite3'
 group :development, :test do # <<<< :development, not devlopment
   gem 'sqlite3'
