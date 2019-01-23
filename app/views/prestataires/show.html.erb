@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Categorie:</strong>
-  <%= @prestataire.categorie %>
+  <%= image_tag @prestataire.imageurl, size: "150", alt: @prestataire.nom %>
 </p>
-
 <p>
-  <strong>Nom:</strong>
-  <%= @prestataire.nom %>
+  <h1><%= @prestataire.nom %></h1>
 </p>
-
+<p>
+  <h3>Fournisseur en <%= @prestataire.categorie %></h3>
+</p>
 <p>
   <strong>Remise:</strong>
   <%= @prestataire.remise %>
@@ -26,13 +25,7 @@
 </p>
 
 <p>
-  <strong>Ville:</strong>
-  <%= @prestataire.ville %>
-</p>
-
-<p>
-  <strong>Imageurl:</strong>
-  <%= @prestataire.imageurl %>
+  <strong>Localisé à <%= @prestataire.ville %></strong>
 </p>
 
 <%= link_to 'Edit', edit_prestataire_path(@prestataire) %> |
