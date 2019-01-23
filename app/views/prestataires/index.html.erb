@@ -1,38 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Nos Prestataires</h1>
+<div style="text-align: center;">
 
-  <thead>
-<%= link_to 'New Prestataire', new_prestataire_path %>
-  </thead>
+	<h1>Nos Prestataires</h1>
 
-  <tbody>
+	<thead>
+		<%= link_to 'New Prestataire', new_prestataire_path,
+		{ :class=>"w3-btn w3-green w3-text-black w3-round-large"} %>
+		<br><br>
+	</thead>
 
-    <div class="w3-display-topmiddle">
-      <div class="w3-padding">
-      <% @prestataires.each do |prestataire| %>
-        
-        <div class="w3-card-4" style="width:92%;max-width:300px;">
-          <img src=<%= prestataire.imageurl %> alt="begreen remise" style="width:100%;opacity:0.85">
-          <div class="w3-container">
-          <h4><b><%= prestataire.prestation %></b></h4>    
-          <p><%= prestataire.description %></p>    
-          <p><%= prestataire.nom %></p>    
-          <!-- <p><%= prestataire.categorie %></p>     -->
-          <!-- <p><%= prestataire.ville %></p>     -->
-          <h4><b><%= prestataire.remise %></b></h4>    
-          <span><%= link_to 'Show', prestataire %></span>
-          <span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
-          <span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-          <br>
-          <br>
-          
-          </div>
-        </div>
+	<tbody>
+		<div class="w3-container" style="text-align: center;">
+			<% @prestataires.each do |prestataire| %>
 
-        <tr>
-        </tr>
-      <% end %>
-      </div>
-    </div>
-  </tbody>
+			<div class="w3-card-4 w3-margin w3-pale-green" style="display: inline-block;">
+				<div class="w3-container w3-margin">
+					<img src=<%= prestataire.imageurl %> alt="begreen remise" style="max-width:300px;opacity:0.85">
+
+					<br><br>
+
+					<b><%= prestataire.prestation %></b>
+					<p><%= prestataire.description %></p>
+					<p><%= prestataire.nom %></p>
+					<!-- <p><%= prestataire.categorie %></p> -->
+					<!-- <p><%= prestataire.ville %></p> -->
+					<b><%= prestataire.remise %></b>
+					<br><br>
+					<span><%= link_to 'Show', prestataire %></span>
+					<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
+					<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+				</div >
+			</div >
+			<% end %>
+		</div>
+	</div>
+
+</tbody>
