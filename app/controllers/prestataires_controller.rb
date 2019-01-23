@@ -15,10 +15,12 @@ class PrestatairesController < ApplicationController
   # GET /prestataires/new
   def new
     @prestataire = Prestataire.new
+    redirect_to prestataires_path, warning: "You are not authorized" unless admin_signed_in?
   end
 
   # GET /prestataires/1/edit
   def edit
+    redirect_to prestataires_path, warning: "You are not authorized" unless admin_signed_in?
   end
 
   # POST /prestataires
