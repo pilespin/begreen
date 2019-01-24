@@ -8,8 +8,9 @@
 
 
     <thead>
-        <%= link_to 'New Restaurant', new_restaurant_path,
-        { :class=>"w3-btn w3-green w3-text-black w3-round-large w3-animate-left"} %>
+        <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Ajouté Mon Restaurant', new_restaurant_path%>
+        </p>
+
         <br><br>
         <br><br>
 
@@ -23,23 +24,23 @@
             <div class="w3-card-4 w3-margin w3-pale-green w3-animate-zoom" style="display: inline-block;">
                 <div class="w3-container">
                     <% unless rs.q15.nil? %>
-                        <h2><%=rs.q15%></h2>
+                    <h2><%=rs.q15%></h2>
                     <% end %>
 
                     <span>Score <strong><%= rs.q1.to_i+rs.q2.to_i+rs.q3.to_i+rs.q4.to_i+rs.q5.to_i+rs.q6.to_i+rs.q7.to_i+rs.q8.to_i+rs.q9.to_i+rs.q10.to_i+rs.q11.to_i+rs.q12.to_i %>%<strong></span>
-                    <br><br>
+                        <br><br>
 
-                    <% if admin_signed_in? %>
-                    <span><%= link_to 'Show', rs %></span>
-                    <span><%= link_to 'Edit', edit_restaurant_path(rs) %></span>
-                    <span><%= link_to 'Destroy', rs, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-                    <% end %>
+                        <% if admin_signed_in? %>
+                        <span><%= link_to 'Show', rs %></span>
+                        <span><%= link_to 'Edit', edit_restaurant_path(rs) %></span>
+                        <span><%= link_to 'Destroy', rs, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                        <% end %>
+                    </div >
                 </div >
-            </div >
-            <% end %>
+                <% end %>
+            </div>
         </div>
-    </div>
 
-</tbody>
+    </tbody>
 
-<br>
+    <br>
