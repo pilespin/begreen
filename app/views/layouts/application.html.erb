@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>ecoTrèfle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -8,31 +8,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
+<body>
     <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+    <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+    <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-<div class="w3-light-grey">
-  <%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly"%> 
+    <div class="w3-light-grey w3-mobile">
+      <%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly", class: "w3-mobile"%> 
 
-  <a href="http://ecotrefle.strikingly.com" class="w3-bar-item w3-button">Home</a>
-  <a href="/restaurants" class="w3-bar-item w3-button">Restaurants</a>
-  <a href="/prestataires" class="w3-bar-item w3-button">Prestataires</a>
+      <a href="http://ecotrefle.strikingly.com" class="w3-bar-item w3-button w3-mobile">Home</a>
+      <a href="/restaurants" class="w3-bar-item w3-button w3-mobile">Restaurants</a>
+      <a href="/prestataires" class="w3-bar-item w3-button w3-mobile">Prestataires</a>
 
-  <!-- <input type="text" class="w3-bar-item w3-input" placeholder="Search.."> -->
-  <!-- <a href="#" class="w3-bar-item w3-button w3-green">Go</a> -->
-</div>
+      <!-- <input type="text" class="w3-bar-item w3-input" placeholder="Search.."> -->
+      <!-- <a href="#" class="w3-bar-item w3-button w3-green">Go</a> -->
+  </div>
 
-    <%= yield %>
+  <%= yield %>
 
 
-  </body>
+</body>
 </html>
