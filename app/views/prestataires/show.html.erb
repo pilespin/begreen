@@ -23,7 +23,9 @@
   <strong>Description:</strong>
   <%= @prestataire.description %>
 </p>
-
+<% unless @prestataire.email.nil? %>
+<%= mail_to @prestataire.email, "contacter le prestataire", :class => "btn btn-secondary" %>
+<% end %>
 <p>
   <strong>Localisé à <%= @prestataire.ville %></strong>
 </p>

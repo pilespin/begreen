@@ -10,6 +10,7 @@ class PrestatairesController < ApplicationController
   # GET /prestataires/1
   # GET /prestataires/1.json
   def show
+      @prestataire = Prestataire.find(params[:id])
   end
 
   # GET /prestataires/new
@@ -71,6 +72,6 @@ class PrestatairesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prestataire_params
-      params.require(:prestataire).permit(:categorie, :nom, :remise, :prestation, :description, :ville, :imageurl)
+      params.require(:prestataire).permit(:categorie, :nom, :remise, :prestation, :description, :ville, :imageurl, :email)
     end
 end
