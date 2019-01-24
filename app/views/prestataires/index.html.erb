@@ -19,14 +19,14 @@
 				<div class="w3-container w3-margin">
 					<%= image_tag(prestataire.imageurl, :alt => prestataire.nom, :size => "300x300") %>
 					<br><br>
-					<b><%= prestataire.prestation %></b>
+					<h2><%= prestataire.description %></h2>
 					<br>
-					<p><%= prestataire.description %></p>
-					<p><%= prestataire.nom %></p>
+					<h3><%= prestataire.prestation %></h3>
+					<h4><%= prestataire.nom %></h4>
 					<!-- <p><%= prestataire.categorie %></p> -->
 					<!-- <p><%= prestataire.ville %></p> -->
-					<b><%= prestataire.remise %></b>
-					<br><br>
+					<h1><b><%= prestataire.remise %></b></h1>
+					<br>
 					<%= link_to 'En savoir plus', prestataire, :class => "btn btn-info"%>
 					<% if admin_signed_in? %>
 					<span></span>
