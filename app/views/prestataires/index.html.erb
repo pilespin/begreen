@@ -1,23 +1,26 @@
 <div style="text-align: center;">
 
-	<h1>Nos Prestataires</h1>
-<% if admin_signed_in? %>
+	<h1 class="w3-animate-top">Nos Prestataires</h1>
+	<br><br>
+
+	<% if admin_signed_in? %>
 	<thead>
 		<%= link_to 'New Prestataire', new_prestataire_path,
 		{ :class=>"w3-btn w3-green w3-text-black w3-round-large"} %>
 		<br><br>
 	</thead>
-<% end %>
+	<% end %>
 
 	<tbody>
 		<div class="w3-container" style="text-align: center;">
 			<% @prestataires.each do |prestataire| %>
 
-			<div class="w3-card-4 w3-margin w3-pale-green" style="display: inline-block;max-width: 368px;">
+			<div class="w3-card-4 w3-margin w3-pale-green w3-animate-zoom" style="display: inline-block;max-width: 368px;min-height: 570px;">
 				<div class="w3-container w3-margin">
 					<%= image_tag(prestataire.imageurl, :alt => prestataire.nom, :size => "300x300") %>
 					<br><br>
 					<b><%= prestataire.prestation %></b>
+					<br>
 					<p><%= prestataire.description %></p>
 					<p><%= prestataire.nom %></p>
 					<!-- <p><%= prestataire.categorie %></p> -->
@@ -26,9 +29,9 @@
 					<br><br>
 					<%= link_to 'En savoir plus', prestataire, :class => "btn btn-info"%>
 					<% if admin_signed_in? %>
-						<span></span>
-						<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
-						<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+					<span></span>
+					<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
+					<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
 					<% end %>
 				</div >
 			</div >

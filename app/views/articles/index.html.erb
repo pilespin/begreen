@@ -2,10 +2,11 @@
 
 <div style="text-align: center;">
 
-    <h2>Your restaurant eco friendly</h2>
+    <h2 class="w3-animate-top">Your restaurant eco friendly</h2>
+    <br><br>
 
     <%= link_to 'Evaluer votre restaurant', new_restaurant_path,
-    { :class=>"w3-btn w3-green w3-text-black w3-round-large"}%>
+    { :class=>"w3-btn w3-green w3-text-black w3-round-large w3-animate-left"}%>
 
     <br><br><br><br><br>
     <% if user_signed_in? %>
@@ -24,6 +25,6 @@
     <% if admin_signed_in? %>  
     <p> <%= link_to "log out admin", destroy_admin_session_path, method: :delete %> </p>
     <% elsif !admin_signed_in? && !user_signed_in? %> 
-     <p>  <%= link_to "sign in admin", new_admin_session_path %> </p>
+    <p>  <%= link_to "sign in admin", new_admin_session_path %> </p>
     <% end %>
 </div>
