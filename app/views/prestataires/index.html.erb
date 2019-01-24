@@ -3,12 +3,13 @@
 <div style="text-align: center;">
 
 	<h1>Nos Prestataires</h1>
-
+<% if admin_signed_in? %>
 	<thead>
 		<%= link_to 'New Prestataire', new_prestataire_path,
 		{ :class=>"w3-btn w3-green w3-text-black w3-round-large"} %>
 		<br><br>
 	</thead>
+<% end %>
 
 	<tbody>
 		<div class="w3-container" style="text-align: center;">
@@ -19,7 +20,6 @@
 					<img src=<%= prestataire.imageurl %> alt="begreen remise" style="max-width:300px;opacity:0.85">
 
 					<br><br>
-
 					<b><%= prestataire.prestation %></b>
 					<p><%= prestataire.description %></p>
 					<p><%= prestataire.nom %></p>
@@ -27,8 +27,9 @@
 					<!-- <p><%= prestataire.ville %></p> -->
 					<b><%= prestataire.remise %></b>
 					<br><br>
+					<%= link_to 'En savoir plus', prestataire, :class => "btn btn-info"%>
 					<% if admin_signed_in? %>
-						<span><%= link_to 'Show', prestataire %></span>
+						<span></span>
 						<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
 						<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
 					<% end %>

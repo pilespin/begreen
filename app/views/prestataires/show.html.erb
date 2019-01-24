@@ -27,7 +27,8 @@
 <p>
   <strong>Localisé à <%= @prestataire.ville %></strong>
 </p>
-
-<%= link_to 'Edit', edit_prestataire_path(@prestataire) %> |
-<%= link_to 'Back', prestataires_path %>
+<% if admin_signed_in? %>
+  <%= link_to 'Edit', edit_prestataire_path(@prestataire), :class => "btn btn-dark" %> |
+<% end %>
+<%= link_to 'Retour', prestataires_path, :class => "btn btn-dark" %>
 </div>
