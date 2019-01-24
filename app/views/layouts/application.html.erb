@@ -20,12 +20,17 @@
     <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
-    <div class="w3-light-grey w3-mobile">
-      <%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly", class: "w3-mobile"%> 
+    <div class="w3-mobile" style="background-color: #78BD70;text-align: left;min-height: 80px;">
+      <span>
+          <a href="/"><%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly", class: "w3-mobile"%>
 
-      <a href="http://ecotrefle.strikingly.com" class="w3-bar-item w3-button w3-mobile">Home</a>
-      <a href="/restaurants" class="w3-bar-item w3-button w3-mobile">Restaurants</a>
-      <a href="/prestataires" class="w3-bar-item w3-button w3-mobile">Prestataires</a>
+          </a> 
+
+          <a href="http://ecotrefle.strikingly.com" class="w3-bar-item w3-button w3-mobile">Landing</a>
+          <a href="/restaurants" class="w3-bar-item w3-button w3-mobile">Restaurants</a>
+          <a href="/prestataires" class="w3-bar-item w3-button w3-mobile">Prestataires</a>
+          
+      </span>
 
       <!-- <input type="text" class="w3-bar-item w3-input" placeholder="Search.."> -->
       <!-- <a href="#" class="w3-bar-item w3-button w3-green">Go</a> -->
