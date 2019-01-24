@@ -28,7 +28,7 @@ class RestaurantsController < ApplicationController
     # @prestataire = Prestataire.new(restaurant_params)
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to prestataires_path, notice: 'Voici les prestataires qui correspondent à votre besoin' }
+        format.html { redirect_to prestataires_path, notice: "Votre note écologique est de #{@restaurant.q1.to_i+@restaurant.q2.to_i+@restaurant.q3.to_i+@restaurant.q4.to_i+@restaurant.q5.to_i+@restaurant.q6.to_i+@restaurant.q7.to_i+@restaurant.q8.to_i+@restaurant.q9.to_i+@restaurant.q10.to_i+@restaurant.q11.to_i+@restaurant.q12.to_i}/100. Voici une liste de prestataires qui peuvent vous aider à ameliorer votre note" }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
