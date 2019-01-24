@@ -27,9 +27,11 @@
 					<!-- <p><%= prestataire.ville %></p> -->
 					<b><%= prestataire.remise %></b>
 					<br><br>
-					<span><%= link_to 'Show', prestataire %></span>
-					<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
-					<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+					<% if admin_signed_in? %>
+						<span><%= link_to 'Show', prestataire %></span>
+						<span><%= link_to 'Edit', edit_prestataire_path(prestataire) %></span>
+						<span><%= link_to 'Destroy', prestataire, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+					<% end %>
 				</div >
 			</div >
 			<% end %>

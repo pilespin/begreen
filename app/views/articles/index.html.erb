@@ -17,8 +17,13 @@
 
     <%= link_to 'New Article', new_article_path %>
 
-
+    <p> <%= link_to "log out", destroy_user_session_path, method: :delete %> </p>
     <%else%>
-    <p>Please sign in or register to access</p>
+    <p> Please  <%= link_to "sign in", new_user_session_path %> or <%= link_to "register", new_user_registration_path %> to access</p>
     <%end%>
+    <% if admin_signed_in? %>  
+    <p> <%= link_to "log out admin", destroy_admin_session_path, method: :delete %> </p>
+    <% elsif !admin_signed_in? && !user_signed_in? %> 
+     <p>  <%= link_to "sign in admin", new_admin_session_path %> </p>
+    <% end %>
 </div>

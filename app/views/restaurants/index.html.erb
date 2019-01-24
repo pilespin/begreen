@@ -17,13 +17,14 @@
 
             <div class="w3-card-4 w3-margin w3-pale-green" style="display: inline-block;">
                 <div class="w3-container">
-
+                    <p> restaurant : <%=rs.q13%></p>
                     <span>Score <%= rs.q1.to_i+rs.q2.to_i+rs.q3.to_i+rs.q4.to_i+rs.q5.to_i+rs.q6.to_i+rs.q7.to_i+rs.q8.to_i+rs.q9.to_i+rs.q10.to_i+rs.q11.to_i+rs.q12.to_i %>%</span>
                     <br><br>
-                    <span><%= link_to 'Show', rs %></span>
-                    <span><%= link_to 'Edit', edit_restaurant_path(rs) %></span>
-                    <span><%= link_to 'Destroy', rs, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-
+					<% if admin_signed_in? %>
+                        <span><%= link_to 'Show', rs %></span>
+                        <span><%= link_to 'Edit', edit_restaurant_path(rs) %></span>
+                        <span><%= link_to 'Destroy', rs, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+					<% end %>
                 </div >
             </div >
             <% end %>
