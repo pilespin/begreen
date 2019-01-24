@@ -21,63 +21,66 @@
         <h2>Evaluation de votre empreinte écologique</h2>
     </div>
 
+
     <div class="w3-container w3-sand">
         <br>
+        <h5>Afin d'évaluer l'impact écologique de votre restaurant, nous vous invitons à répondre à ces quelques questions.</h5>
+        <br>
 
-        <h4>Proposez-vous a vos clients de venir avec leurs propre boite alimentaire pour emporter leurs plats?</h4>
+        <h5>Proposez-vous a vos clients de venir avec leurs propre boite alimentaire pour emporter leurs plats ?</h5>
         <div><%= form.radio_button :q1, '10', { :class=>"w3-radio"} %> Oui, c'est même affiché dans le magasin</input></div>
         <div><%= form.radio_button :q1, '5', { :class=>"w3-radio"} %> Oui, sur demande du client"</input></div>
         <div><%= form.radio_button :q1, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Fournissez vous proposez des pailles a vos clients ?</h4>
+        <h5>Fournissez vous proposez des pailles a vos clients  ?</h5>
         <div><%= form.radio_button :q2, '0', { :class=>"w3-radio"} %> Oui, des pailles en plastique</input></div>
         <div><%= form.radio_button :q2, '5', { :class=>"w3-radio"} %> Oui, des pailles en amidon / carton</input></div>
         <div><%= form.radio_button :q2, '5', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous proposez des emballages alimentaires recyclables a vos clients ?</h4>
+        <h5>Est-ce que vous proposez des emballages alimentaires recyclables a vos clients  ?</h5>
         <div><%= form.radio_button :q3, '10', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q3, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous proposez a vos clients de ramener chez eux le reste de la nourriture (Doggybag) ?</h4>
+        <h5>Est-ce que vous proposez a vos clients de ramener chez eux le reste de la nourriture (Doggybag)  ?</h5>
         <div><%= form.radio_button :q4, '5', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q4, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous proposez plusieurs plats vegan et/ou végétarien sur votre carte ?</h4>
+        <h5>Est-ce que vous proposez plusieurs plats vegan et/ou végétarien sur votre carte  ?</h5>
         <div><%= form.radio_button :q5, '15', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q5, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Proposez-vous des services de livraison a domicile ?</h4>
+        <h5>Proposez-vous des services de livraison a domicile  ?</h5>
         <div><%= form.radio_button :q6, '10', { :class=>"w3-radio"} %> Oui, par vélo ou scooter électrique</input></div>
         <div><%= form.radio_button :q6, '0', { :class=>"w3-radio"} %> Oui, par scooter thermique</input></div>
         <div><%= form.radio_button :q6, '5', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous avez des moyens pour valoriser vos biodechets?</h4>
+        <h5>Est-ce que vous avez des moyens pour valoriser vos biodechets ?</h5>
         <div><%= form.radio_button :q7, '10', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q7, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous recycler vos huiles usager?</h4>
+        <h5>Est-ce que vous recycler vos huiles usager ?</h5>
         <div><%= form.radio_button :q8, '5', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q8, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Votre fournisseur d'énergie est-il vert ?</h4>
+        <h5>Votre fournisseur d'énergie est-il vert  ?</h5>
         <div><%= form.radio_button :q9, '10', { :class=>"w3-radio"} %> Oui, je dispose d'un fournisseur d'électricité verte</input></div>
         <div><%= form.radio_button :q9, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>Est-ce que vous utilisez des bocaux en verre ou des boites consignés pour vos plats à emporter?</h4>
+        <h5>Est-ce que vous utilisez des bocaux en verre ou des boites consignés pour vos plats à emporter ?</h5>
         <div><%= form.radio_button :q10, '10', { :class=>"w3-radio"} %> Oui</input></div>
         <div><%= form.radio_button :q10, '0', { :class=>"w3-radio"} %> Non</input></div>
         <br>
 
-        <h4>En moyenne, à quel distance se situent vos producteurs de fruits légumes?</h4>
+        <h5>En moyenne, à quel distance se situent vos producteurs de fruits légumes ?</h5>
         <div><%= form.radio_button :q11, '15', { :class=>"w3-radio"} %> 0-250 km</input></div>
         <div><%= form.radio_button :q11, '10', { :class=>"w3-radio"} %> 250-500 km</input></div>
         <div><%= form.radio_button :q11, '5', { :class=>"w3-radio"} %> 500-1000 km</input></div>
@@ -85,18 +88,18 @@
         <div><%= form.radio_button :q11, '0', { :class=>"w3-radio"} %> 2000+ km</input></div>
         <br>
 
-        <h4>Quel pourcentage de vos fruits légumes sont des produits de saison?</h4>
+        <h5>Quel pourcentage de vos fruits légumes sont des produits de saison ?</h5>
         <div><%= form.radio_button :q12, '0', { :class=>"w3-radio"} %> 0-30%</input></div>
         <div><%= form.radio_button :q12, '5', { :class=>"w3-radio"} %> 30-50%</input></div>
         <div><%= form.radio_button :q12, '10', { :class=>"w3-radio"} %> 50-70%</input></div>
         <div><%= form.radio_button :q12, '15', { :class=>"w3-radio"} %> 70-100%</input></div>
         <br>
 
-        <h4>e-Mail :</h4>
+        <h5>Votre e-Mail :</h5>
         <div><%= form.text_field :q13, { :class=>"w3-input w3-border"}%></input></div>
         <br>
 
-        <h4>Téléphone :</h4>
+        <h5>Laissez également votre numéro de téléphone afin que l'on puisse discuter avec vous des mesures envisageables pour améliorer votre impact écologique.</h5>
         <div><%= form.text_field :q14, { :class=>"w3-input w3-border"} %></input></div>
 
         <br><br>
