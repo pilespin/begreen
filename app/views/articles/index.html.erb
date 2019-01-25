@@ -1,132 +1,128 @@
 
-<div style="max-width: 900px;">
+<div class="w3-cell-row">
+
+    <div class="w3-container  w3-cell w3-center" style="background-color: #D0DEBB;width: 50%">
+        <br><br><br><br>
+
+        <h2 class="w3-animate-top">Passez au vert, facilement</h2>
+        <h3 class="w3-animate-top">Evaluez l'impact écologique de votre restaurant et nous vous aiderons à l'améliorer</h3>
+        <br><br><br>
+
+        <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Evaluer votre restaurant', new_restaurant_path%>
+        </p>
+
+        <br><br><br><br>
+    </div>
+
+    <div class="w3-container  w3-cell w3-center" style="background-color: #ffffff;width: 50%">
+        <br><br><br>
+
+        <a><%= image_tag "dechets.svg", width: "90%", alt: "Ecotrefle your restaurant eco friendly"%>
+
+        </div>
+
+    </div>
+</div>
 
 
-    <div class="w3-cell-row">
+
+
+<div class="w3-cell-row">
+
+    <div class="w3-container  w3-cell w3-center" style="background-color: #ffffff;width: 50%">
+        <br><br><br>
+
+        <a><%= image_tag "prestataires.svg", width: "90%", alt: "Ecotrefle your restaurant eco friendly"%>
+
+            <br><br><br><br>
+        </div>
 
         <div class="w3-container  w3-cell w3-center" style="background-color: #D0DEBB;width: 50%">
-            <br><br><br><br>
-
-            <h2 class="w3-animate-top">Passez au vert, facilement</h2>
-            <h3 class="w3-animate-top">Evaluez l'impact écologique de votre restaurant et nous vous aiderons à l'améliorer</h3>
             <br><br><br>
+            <h2 class="w3-animate-top">Des prestataires écologique</h2>
+            <h3 class="w3-animate-top">Aujourd'hui, il est possible de changer facilement ses habitudes et devenir plus écologique sans pour autant dépenser plus.
 
-            <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Evaluer votre restaurant', new_restaurant_path%>
+            BeGreen analyse vos habitudes et vous propose des solutions concrètes en vous proposant des prestataires de qualité.</h3>
+            <br>
+
+            <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Analyser mes habitudes gratuitement', new_restaurant_path%>
             </p>
-
-            <br><br><br><br>
-        </div>
-
-        <div class="w3-container  w3-cell w3-center" style="background-color: #ffffff;width: 50%">
-            <br><br><br>
-
-            <a><%= image_tag "dechets.svg", width: "90%", alt: "Ecotrefle your restaurant eco friendly"%>
-
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-    <div class="w3-cell-row">
-
-        <div class="w3-container  w3-cell w3-center" style="background-color: #ffffff;width: 50%">
-            <br><br><br>
-
-            <a><%= image_tag "prestataires.svg", width: "90%", alt: "Ecotrefle your restaurant eco friendly"%>
-
-                <br><br><br><br>
-            </div>
-
-            <div class="w3-container  w3-cell w3-center" style="background-color: #D0DEBB;width: 50%">
-                <br><br><br>
-                <h2 class="w3-animate-top">Des prestataires écologique</h2>
-                <h3 class="w3-animate-top">Aujourd'hui, il est possible de changer facilement ses habitudes et devenir plus écologique sans pour autant dépenser plus.
-
-                BeGreen analyse vos habitudes et vous propose des solutions concrètes en vous proposant des prestataires de qualité.</h3>
-                <br>
-
-                <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Analyser mes habitudes gratuitement', new_restaurant_path%>
-                </p>
-                <br><br>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-    <div class="w3-container w3-center" style="background-color: #ffffff">
-        <br><br>
-        <a><%= image_tag "partenariats.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
-            <br><br><br>
-
-        </div>
-
-        <div class="w3-container w3-center" style="background-color: #D0DEBB;">
             <br><br>
-            <h2 class="w3-animate-top">Une envie de passer au vert ?</h2>
-            <br>
-            <h3 class="w3-animate-top">Vous avez surement déjà pris des initiatives écologiques pour votre restaurant, évaluez les maintenant gratuitement et nous vous aiderons dans votre transition écologique!</h3>
-            <br>
-
-            <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Evaluation gratuite en 5 minutes', new_restaurant_path%>
-            </p>
-
-            <br><br><br><br>
         </div>
 
     </div>
+</div>
 
 
-    <div class="w3-container w3-center" style="background-color: #ffffff">
-        <br><br>
-        <a><%= image_tag "responsive.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
-            <br><br><br>
 
-        </div>
 
-        <div class="w3-container w3-center" style="background-color: #D0DEBB;">
-            <br><br>
-            <h2 class="w3-animate-top">Ces restaurateurs ont déjà évalué leur restaurant</h2>
-            <br>
-            <h3 class="w3-animate-top">Comparez votre note avec la leur</h3>
-            <br>
-
-            <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Voir les restaurant', restaurants_path%>
-            </p>
-
-            <br><br><br><br>
-        </div>
+<div class="w3-container w3-center" style="background-color: #ffffff">
+    <br><br>
+    <a><%= image_tag "partenariats.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
+        <br><br><br>
 
     </div>
 
-    <div class="w3-container w3-center" style="background-color: #ffffff">
+    <div class="w3-container w3-center" style="background-color: #D0DEBB;">
         <br><br>
-        <a><%= image_tag "restaurateurs.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
-            <br><br><br>
+        <h2 class="w3-animate-top">Une envie de passer au vert ?</h2>
+        <br>
+        <h3 class="w3-animate-top">Vous avez surement déjà pris des initiatives écologiques pour votre restaurant, évaluez les maintenant gratuitement et nous vous aiderons dans votre transition écologique!</h3>
+        <br>
 
-        </div>
+        <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Evaluation gratuite en 5 minutes', new_restaurant_path%>
+        </p>
 
-        <div class="w3-container w3-center" style="background-color: #D0DEBB;">
-            <br><br>
-            <h2 class="w3-animate-top">Contacts</h2>
-            <br>
-            <h3 class="w3-animate-top">Nous revenons vers vous pour un devis personalisé</h3>
-            <br>
-
-            <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Contacté nous', new_restaurant_path%>
-            </p>
-
-            <br><br><br><br>
-        </div>
-
+        <br><br><br><br>
     </div>
 
 </div>
+
+
+<div class="w3-container w3-center" style="background-color: #ffffff">
+    <br><br>
+    <a><%= image_tag "responsive.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
+        <br><br><br>
+
+    </div>
+
+    <div class="w3-container w3-center" style="background-color: #D0DEBB;">
+        <br><br>
+        <h2 class="w3-animate-top">Ces restaurateurs ont déjà évalué leur restaurant</h2>
+        <br>
+        <h3 class="w3-animate-top">Comparez votre note avec la leur</h3>
+        <br>
+
+        <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Voir les restaurant', restaurants_path%>
+        </p>
+
+        <br><br><br><br>
+    </div>
+
+</div>
+
+<div class="w3-container w3-center" style="background-color: #ffffff">
+    <br><br>
+    <a><%= image_tag "restaurateurs.svg", width: "50%", alt: "Ecotrefle your restaurant eco friendly"%>
+        <br><br><br>
+
+    </div>
+
+    <div class="w3-container w3-center" style="background-color: #D0DEBB;">
+        <br><br>
+        <h2 class="w3-animate-top">Contacts</h2>
+        <br>
+        <h3 class="w3-animate-top">Nous revenons vers vous pour un devis personalisé</h3>
+        <br>
+
+        <p class="w3-btn w3-text-black w3-round-large w3-animate-left" style="background-color: #6CC24A"><%= link_to 'Contacté nous', new_restaurant_path%>
+        </p>
+
+        <br><br><br><br>
+    </div>
+
+</div>
+
 
 <a class="w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">
     
