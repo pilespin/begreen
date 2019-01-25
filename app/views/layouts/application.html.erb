@@ -21,22 +21,41 @@
     <% end %>
 
     <div class="w3-mobile" style="background-color: #6CC24A;text-align: left;min-height: 80px;">
-      <span>
-          <a href="/"><%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly", class: "w3-mobile"%>
+        <span>
+            <a href="/"><%= image_tag "ecotrefle.svg", size: "80", alt: "Ecotrefle your restaurant eco friendly", class: "w3-mobile"%>
+            </a> 
 
-          </a> 
+            <a href="http://ecotrefle.strikingly.com" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Landing</a>
+            <a href="/restaurants" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Restaurants</a>
+            <a href="/prestataires" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Prestataires</a>
 
-          <a href="http://ecotrefle.strikingly.com" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Landing</a>
-          <a href="/restaurants" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Restaurants</a>
-          <a href="/prestataires" class="w3-btn w3-white w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">Prestataires</a>
-          
-      </span>
+            <a class="w3-round-xxlarge w3-margin-right w3-bar-item w3-button w3-mobile">
+                
 
-      <!-- <input type="text" class="w3-bar-item w3-input" placeholder="Search.."> -->
-      <!-- <a href="#" class="w3-bar-item w3-button w3-green">Go</a> -->
-  </div>
+                <% if user_signed_in? %>
+                <%= link_to 'New Article', new_article_path %>
 
-  <%= yield %>
+                <a> <%= link_to "log out", destroy_user_session_path, method: :delete %> </a>
+                <%else%>
+                <a> Please  <%= link_to "sign in", new_user_session_path %> or <%= link_to "register", new_user_registration_path %> to access</a>
+                <%end%>
+                <% if admin_signed_in? %>  
+                <a> <%= link_to "log out admin", destroy_admin_session_path, method: :delete %> </a>
+                <% elsif !admin_signed_in? && !user_signed_in? %> 
+                <a>  <%= link_to "sign in admin", new_admin_session_path %> </a>
+                <% end %>
+
+                
+            </a>
+
+
+        </span>
+
+        <!-- <input type="text" class="w3-bar-item w3-input" placeholder="Search.."> -->
+        <!-- <a href="#" class="w3-bar-item w3-button w3-green">Go</a> -->
+    </div>
+
+    <%= yield %>
 
 
 </body>
